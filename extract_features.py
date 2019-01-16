@@ -41,7 +41,7 @@ def _open_img(pokemon: 'a pokemon', index: int, flag=1) -> np.ndarray:
     return cv.imread(path, flags=flag)
 
 
-def _get_colors(image: 'image representation') -> np.ndarray:
+def _get_colors(image: 'image representation') -> tuple:
     blue, green, red = cv.split(image)
     return blue.ravel(), green.ravel(), red.ravel()
 
